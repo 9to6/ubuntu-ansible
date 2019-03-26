@@ -1,0 +1,12 @@
+---
+# Additional packages
+#additional_packages:
+#  - curl
+
+username: 'tkwon'
+# group_name: '{{ current_user }}'
+#user_home_path: "{{ lookup('env','HOME') }}"
+
+# Git global config
+#git_name:
+#git_email:

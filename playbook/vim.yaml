@@ -1,0 +1,12 @@
+---
+- name: Set Up vim
+  hosts: all
+  become_user: "{{ username }}"
+  tasks:
+    - name: clone vundle
+      git: repo=https://github.com/VundleVim/Vundle.vim
+           dest=/home/{{ username }}/.vim/bundle/Vundle.vim
+           update=no
+
+    - name: wget .vimrc file
+      shell: wget https://raw.githubusercontent.com/9to6/.vimrc/master/vimrc_basic -O /home/{{ username }}/.vimrc
